@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Martins News</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header>
+    <h1><span>🗞️</span>Martins News</h1>
+    <div class="controls">
+      <select id="category">
+        <option value="">All</option>
+        <option value="business">Business</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="general">General</option>
+        <option value="health">Health</option>
+        <option value="science">Science</option>
+        <option value="sports">Sports</option>
+        <option value="technology">Technology</option>
+      </select>
+      <input type="text" id="search" placeholder="Search by keyword..." />
+      <input type="date" id="fromDate" />
+      <input type="date" id="toDate" />
+      <button id="refresh">🔄</button>
+      <button id="themeToggle">🌓</button>
+    </div>
+  </header>
+
+  <main id="news-container"></main>
+
+  <footer>
+    <p>🌐 Powered by NewsAPI | Made with 💜 by @martins-fidel</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-image" alt="Article image"/>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <a id="modal-link" href="#" target="_blank">Read full article</a>
+    </div>
+  </div>
+
+  <script src="./src/project.js"></script>
+</body>
+</html>
