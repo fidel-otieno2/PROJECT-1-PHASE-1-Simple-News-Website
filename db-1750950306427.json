@@ -1,0 +1,16 @@
+{
+  "news_results": [
+    {
+      "position": 1,
+      "title": "Trump names Linda McMahon as his pick for Education secretary",
+      "source": {
+        "name": "CNN",
+        "icon": "https://lh3.googleusercontent.com/8zdvTbISHUn-4iHkauW-_yQSGPD9BMrx9EWfqTIhiVm2YMYqhHC1HJWNDQoSOkMk0MRPYKxjIg"
+      },
+      "date": "11/20/2024, 04:58 AM, +0200 EET",
+      "snippet": "Some summary here...",
+      "thumbnail": "https://example.com/image.jpg",
+      "link": "https://cnn.com/article"
+    }
+  ]
+}
