@@ -1,123 +1,12 @@
 {
-  "search_metadata": {
-    "id": "673da57496b8f8d40cf26b1f",
-    "status": "Success",
-    "json_endpoint": "https://serpapi.com/searches/2adba6d60e381f18/673da57496b8f8d40cf26b1f.json",
-    "created_at": "2024-11-20 09:01:40 UTC",
-    "processed_at": "2024-11-20 09:01:40 UTC",
-    "google_news_url": "https://news.google.com/home?hl=en&gl=US",
-    "raw_html_file": "https://serpapi.com/searches/2adba6d60e381f18/673da57496b8f8d40cf26b1f.html",
-    "total_time_taken": 1.61
-  },
-  "search_parameters": {
-    "engine": "google_news",
-    "gl": "us",
-    "hl": "en"
-  },
-  "top_stories_link": {
-    "topic_token": "CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB",
-    "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=us&topic_token=CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB"
-  },
   "news_results": [
     {
-      "position": 1,
-      "highlight": {
-        "title": "Trump names Linda McMahon as his pick for Education secretary",
-        "source": {
-          "name": "CNN",
-          "icon": "https://lh3.googleusercontent.com/8zdvTbISHUn-4iHkauW-_yQSGPD9BMrx9EWfqTIhiVm2YMYqhHC1HJWNDQoSOkMk0MRPYKxjIg",
-          "authors": [
-            "Kristen Holmes",
-            "Kaitlan Collins",
-            "John Towfighi"
-          ]
-        },
-        "link": "https://www.cnn.com/2024/11/19/politics/linda-mcmahon-education-secretary-trump/index.html",
-        "thumbnail": "https://media.cnn.com/api/v1/images/stellar/prod/linda-mcmahon-2024-07-18t232657z-1175398264-hp1ek7i1t4ur7-rtrmadp-3-usa-election-republicans-convention.jpg?c=16x9&q=h_833,w_1480,c_fill",
-        "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVVVV1ZVZVMwdFFVTlpkelYzVFJDZkF4amlCU2dLTWdhQlE1YkZuZ2c",
-        "date": "11/20/2024, 10:37 AM, +0200 EET"
-      },
-      "stories": [
-        {
-          "position": 1,
-          "title": "Trump taps former WWE CEO Linda McMahon to serve as education secretary",
-          "source": {
-            "name": "Fox News",
-            "icon": "https://lh3.googleusercontent.com/sI1WB0Q5duO4KjZqNG5iwyb-5Rt-WYpF7YJjAde847yk_-mOpMueyEcXZgjU5dIMJNdPwe2ICg",
-            "authors": [
-              "Paul Steinhauser",
-              "Andrea Margolis"
-            ]
-          },
-          "link": "https://www.foxnews.com/politics/trump-taps-former-wwe-ceo-linda-mcmahon-serve-education-secretary",
-          "thumbnail": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2024/11/1200/675/linda_trump.jpg?ve=1&tl=1",
-          "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUlUSGhJTVdORFdHRXhkbmh3VFJDZkF4ampCU2dLTWdtTlFaakZJbWsxU1FJ",
-          "story_token": "CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2k3NE5UZURCRkJkWFRLVXFfTENpZ0FQAQ",
-          "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=us&story_token=CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2k3NE5UZURCRkJkWFRLVXFfTENpZ0FQAQ",
-          "date": "11/20/2024, 02:19 AM, +0200 EET"
-        }
-      ],
-      "story_token": "CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2k3NE5UZURCRkJkWFRLVXFfTENpZ0FQAQ",
-      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=us&story_token=CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2k3NE5UZURCRkJkWFRLVXFfTENpZ0FQAQ"
-    },
-    {
-      "position": 2,
-      "highlight": {
-        "title": "Musk launches SpaceX Starship rocket with Trump at his side",
-        "source": {
-          "name": "Al Jazeera English",
-          "icon": "https://lh3.googleusercontent.com/l-Ps9rkWuApN8G3MB5uZC_a5G7iKCTITjMdpZFhm2rQf3U2M2Yr_KTYpzpmOPxDiUKgb9yN9ha8"
-        },
-        "link": "https://www.aljazeera.com/news/2024/11/19/musk-launches-spacex-rocket-test-with-trump-at-his-side",
-        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2024/11/AP24324780149643-1732053522.jpg?resize=1920%2C1440",
-        "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTFZbnBHTjBkVVpVbzRNQzFSVFJEZ0F4aUFCU2dLTWdhbFFaanNvQWs",
-        "date": "11/20/2024, 01:12 AM, +0200 EET"
-      },
-      "stories": [
-        {
-          "position": 1,
-          "title": "Trump’s turn to bask in Musk’s reflected glory",
-          "source": {
-            "name": "CNN",
-            "icon": "https://lh3.googleusercontent.com/8zdvTbISHUn-4iHkauW-_yQSGPD9BMrx9EWfqTIhiVm2YMYqhHC1HJWNDQoSOkMk0MRPYKxjIg",
-            "authors": [
-              "Stephen Collinson"
-            ]
-          },
-          "link": "https://www.cnn.com/2024/11/20/politics/trump-musk-relationship-analysis/index.html",
-          "thumbnail": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2185632992.jpg?c=original",
-          "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU9WR2RTTnpWemRHazBZekZtVFJDM0FSaVRBaWdCTWdrUmdKSm5NaWNtS3dJ",
-          "story_token": "CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2lBeU9MV0RCR0JCZm4yYWFNeXFTZ0FQAQ",
-          "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=us&story_token=CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2lBeU9MV0RCR0JCZm4yYWFNeXFTZ0FQAQ",
-          "date": "11/20/2024, 07:00 AM, +0200 EET"
-        }
-      ],
-      "story_token": "CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2lBeU9MV0RCR0JCZm4yYWFNeXFTZ0FQAQ",
-      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=us&story_token=CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2lBeU9MV0RCR0JCZm4yYWFNeXFTZ0FQAQ"
-    },
-    {
-      "position": 3,
-      "title": "Deadly bomb cyclone slams Seattle area with fierce winds leaving over 600,000 without power",
-      "source": {
-        "name": "Fox Weather ",
-        "icon": "https://lh3.googleusercontent.com/U-WnHs7OkphkboLFftbovYWJjohUkG_U6YcnX8UqWnQP-OoGliS-19F16KD2zZPE_elkXUkupQ",
-        "authors": [
-          "Scott Sistek"
-        ]
-      },
-      "link": "https://www.foxweather.com/weather-news/bomb-cyclone-seattle-power-outages",
-      "thumbnail": "https://images.foxweather.com/static.foxweather.com/www.foxweather.com/content/uploads/2024/11/1024/512/psound_trailer3.jpeg?ve=1&tl=1",
-      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNVJZMVZqTVhCdGJqRTBiMU5RVFJDSEF4aVBCaWdLTWd1QkVvaGtKV1dLNVZxVFRB",
-      "story_token": "CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2kybk9fWURCRmxxOVhqS3U5X0NTZ0FQAQ",
-      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=us&story_token=CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2kybk9fWURCRmxxOVhqS3U5X0NTZ0FQAQ",
-      "date": "11/20/2024, 09:02 AM, +0200 EET"
-    }
-  ],
-  "menu_links": [
-    {
-      "title": "U.S.",
-      "topic_token": "CAAqIggKIhxDQkFTRHdvSkwyMHZNRGxqTjNjd0VnSmxiaWdBUAE",
-      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=us&topic_token=CAAqIggKIhxDQkFTRHdvSkwyMHZNRGxqTjNjd0VnSmxiaWdBUAE"
+      "title": "Example Title",
+      "link": "https://example.com",
+      "thumbnail": "https://via.placeholder.com/300x150",
+      "snippet": "Example summary.",
+      "source": { "name": "Example Source" },
+      "date": "2024-11-20"
     }
   ]
 }
