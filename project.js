@@ -4,36 +4,59 @@ const search = document.getElementById("search");
 const searchInput = document.getElementById("searchInput");
 
 let currentPage = 1;
-let currentQuery = "sports";
+let currentQuery = "";
 
-const fetchNews = async (page, q) => {
-  let response = await fetch(`https://newsapi.org/v2/everything?q=${encodeURIComponent(q)}&from=2025-06-20&to=2025-06-27&pageSize=20&page=${page}&sortBy=popularity&apiKey=90d787b6f9c9439f9437fd4afd49b7b3`);
-  let changedVar = await response.json();
-  document.getElementById("resultCount").innerHTML = changedVar.totalResults;
-  let str = "";
-  for (let item of changedVar.articles) {
-    str += `
-      <div class="card my-4 mx-2" style="width: 18rem;">
-        <img height="184" src="${item.urlToImage}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">${item.title.slice(0, 25)}</h5>
-          <p class="card-text">${item.description.slice(0, 25)}...</p>
-          <a href="${item.url}" target="_blank" class="btn btn-primary">Read Article</a>
+function buildApiUrl(page) {
+  return `https://6861a00796f0cc4e34b71965.mockapi.io/fidel/fidel?page=1${page}`;
+}
+
+const fetchNews = async (page, q = "") => {
+  try {
+    let response = await fetch(buildApiUrl(page));
+    if (!response.ok) {
+      throw new Error('Failed to load news');
+    }
+    let articles = await response.json();
+
+    // Filter articles by query (title or description) if q is provided
+    if (q && q.trim() !== "") {
+      articles = articles.filter(item =>
+        (item.title && item.title.toLowerCase().includes(q.toLowerCase())) ||
+        (item.description && item.description.toLowerCase().includes(q.toLowerCase()))
+      );
+    }
+
+    document.getElementById("resultCount").innerText = articles.length;
+
+    let defaultImage = "https://via.placeholder.com/286x184?text=No+Image";
+    let str = "";
+    for (let item of articles) {
+      str += `
+        <div class="card my-4 mx-2" style="width: 18rem;">
+          <img height="184" src="${item.urlToImage ? item.urlToImage : defaultImage}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">${item.title ? item.title.slice(0, 25) : ''}</h5>
+            <p class="card-text">${item.description ? item.description.slice(0, 25) : ''}...</p>
+            <a href="${item.url || '#'}" target="_blank" class="btn btn-primary">Read Article</a>
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    }
+    document.querySelector(".content").innerHTML = str;
+  } catch (error) {
+    console.error(error);
+    document.querySelector(".content").innerHTML = `<div class="alert alert-danger">Failed to load news.</div>`;
   }
-  document.querySelector(".content").innerHTML = str;
 };
 
-fetchNews(1, currentQuery);
+fetchNews(currentPage, currentQuery);
 
 search.addEventListener("click", (e) => {
   e.preventDefault();
   let query = searchInput.value;
   currentQuery = query;
   currentPage = 1;
-  fetchNews(1, query);
+  fetchNews(currentPage, currentQuery);
 });
 
 prev.addEventListener("click", (e) => {
@@ -50,10 +73,9 @@ next.addEventListener("click", (e) => {
   fetchNews(currentPage, currentQuery);
 });
 
-
 document.getElementById("home-link").addEventListener("click", (e) => {
   e.preventDefault();
-  currentQuery = "news";
+  currentQuery = "";
   currentPage = 1;
   fetchNews(currentPage, currentQuery);
 });
