@@ -6,25 +6,21 @@ const searchInput = document.getElementById("searchInput");
 let currentPage = 1;
 let currentQuery = "";
 
-function buildApiUrl(page) {
-  return `https://6861a00796f0cc4e34b71965.mockapi.io/fidel/fidel?page=1${page}`;
+const apiKey = "16f3748cbd205ca9b9b4336ff1af35e3"; // Your GNews API key
+
+function buildApiUrl(page, q) {
+  // Uses your provided URL structure
+  return `https://gnews.io/api/v4/search?q=${encodeURIComponent(q || "example")}&lang=en&country=us&max=10&page=${page}&apikey=${apiKey}`;
 }
 
 const fetchNews = async (page, q = "") => {
   try {
-    let response = await fetch(buildApiUrl(page));
+    let response = await fetch(buildApiUrl(page, q));
     if (!response.ok) {
       throw new Error('Failed to load news');
     }
-    let articles = await response.json();
-
-    // Filter articles by query (title or description) if q is provided
-    if (q && q.trim() !== "") {
-      articles = articles.filter(item =>
-        (item.title && item.title.toLowerCase().includes(q.toLowerCase())) ||
-        (item.description && item.description.toLowerCase().includes(q.toLowerCase()))
-      );
-    }
+    let data = await response.json();
+    let articles = data.articles || [];
 
     document.getElementById("resultCount").innerText = articles.length;
 
@@ -33,7 +29,7 @@ const fetchNews = async (page, q = "") => {
     for (let item of articles) {
       str += `
         <div class="card my-4 mx-2" style="width: 18rem;">
-          <img height="184" src="${item.urlToImage ? item.urlToImage : defaultImage}" class="card-img-top" alt="...">
+          <img height="184" src="${item.image ? item.image : defaultImage}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">${item.title ? item.title.slice(0, 25) : ''}</h5>
             <p class="card-text">${item.description ? item.description.slice(0, 25) : ''}...</p>
