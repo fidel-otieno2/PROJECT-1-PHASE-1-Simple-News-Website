@@ -5,11 +5,11 @@ const searchInput = document.getElementById("searchInput");
 
 let currentPage = 1;
 let currentQuery = "";
+let totalPages = 1;
 
 const apiKey = "16f3748cbd205ca9b9b4336ff1af35e3"; // Your GNews API key
 
 function buildApiUrl(page, q) {
-  // Uses your provided URL structure
   return `https://gnews.io/api/v4/search?q=${encodeURIComponent(q || "example")}&lang=en&country=us&max=10&page=${page}&apikey=${apiKey}`;
 }
 
@@ -21,8 +21,16 @@ const fetchNews = async (page, q = "") => {
     }
     let data = await response.json();
     let articles = data.articles || [];
+    let totalArticles = data.totalArticles || 0;
 
-    document.getElementById("resultCount").innerText = articles.length;
+    // Calculate total pages
+    totalPages = Math.ceil(totalArticles / 10);
+
+    document.getElementById("resultCount").innerText = `${articles.length} / ${totalArticles}`;
+
+    // Enable/disable pagination buttons
+    prev.disabled = currentPage <= 1;
+    next.disabled = currentPage >= totalPages;
 
     let defaultImage = "https://via.placeholder.com/286x184?text=No+Image";
     let str = "";
@@ -58,15 +66,17 @@ search.addEventListener("click", (e) => {
 prev.addEventListener("click", (e) => {
   e.preventDefault();
   if (currentPage > 1) {
-    currentPage = currentPage - 1;
+    currentPage--;
     fetchNews(currentPage, currentQuery);
   }
 });
 
 next.addEventListener("click", (e) => {
   e.preventDefault();
-  currentPage = currentPage + 1;
-  fetchNews(currentPage, currentQuery);
+  if (currentPage < totalPages) {
+    currentPage++;
+    fetchNews(currentPage, currentQuery);
+  }
 });
 
 document.getElementById("home-link").addEventListener("click", (e) => {

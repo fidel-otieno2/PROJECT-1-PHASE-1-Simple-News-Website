@@ -1,91 +1,93 @@
-# PROJECT-1-PHASE-1-Simple-News-Website
+## PROJECT-1-PHASE-1-Simple-News-Website
 
-# MARTINS NEWS APP
+# Martins News App
 
-## 📖 Project Overview
-
-**MARTINS NEWS APP** is a modern, responsive single-page web application that allows users to browse, search, and filter the latest news articles from around the world. Powered by the [NewsAPI](https://newsapi.org/), it provides a seamless news reading experience with category filters, search functionality, and pagination—all without page reloads.
-
-### 🚩 Problem It Solves
-
-Finding up-to-date news from multiple categories can be overwhelming. This app solves that by providing a clean, intuitive interface to access news by topic, search keywords, and navigate through results—all in one place and in real time.
+A modern, responsive news website that fetches **live news** from the [GNews API](https://gnews.io/).  
+This project allows users to search for news, browse by category, and paginate through results—all from a beautiful, frontend-only interface.
 
 ---
 
-## 🚀 Quick Setup & Usage
+##  What is this project?
 
-1. **Clone the repository:**
-   ```bash
-   git clone [text](https://github.com/fidel-otieno2/PROJECT-1-PHASE-1-Simple-News-Website.git)
-   cd your-rep-name
-   ```
-
-2. **Open the app:**
-   - Simply open `project.html` in your web browser.
-   - No backend setup is required (all API calls are made from the frontend).
-
-3. **Usage:**
-   - Use the navigation bar to filter news by category (Home, Sports, Weather, Technology).
-   - Use the search bar to find news on any topic.
-   - Use the Previous/Next buttons to paginate through results.
-   - Click "Read Article" to view the full story on the publisher’s site.
+Martins News App is a simple, stylish web application for browsing the latest news headlines.  
+It solves the problem of quickly accessing and searching for current news on any topic, with a clean user experience and no backend setup required.
 
 ---
 
-## 🗂️ Project Structure
+##  Quick Setup & Usage
+
+1. **Clone or download this repository.**
+2. **Open `index.html` in your browser.**
+3. **(Optional) Change the GNews API key:**
+   - Open `project.js`
+   - Replace the value of `apiKey` with your own from [GNews](https://gnews.io/).
+
+4. **Browse, search, and paginate live news instantly!**
+
+---
+
+##  Project Structure
 
 ```
-PROJECT-1-PHASE-1-Simple-News-Website/
+/PROJECT-1-PHASE-1-Simple-News-Website
 │
+├── index.html         # Main HTML file
+├── project.js         # All frontend logic (fetching, rendering, pagination)
 ├── css/
-│   └── style.css         # Custom styles for the app
-├── project.html          # Main single-page application
-├── project.js            # JavaScript logic for fetching and displaying news
-└── README.md             # Project documentation
+│   └── style.css      # Custom styles for a modern look
+├── README.md          # This file
+└── ...                # Other assets (images, etc.)
 ```
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m "Add your feature"`
-4. Push to your fork: `git push origin feature/your-feature`
-5. Open a Pull Request describing your changes.
+- **index.html**: The main page, includes navigation, search, and results area.
+- **project.js**: Handles fetching news from GNews, rendering cards, and pagination logic.
+- **css/style.css**: Contains all custom styles for layout, cards, navbar, and responsiveness.
 
 ---
 
-## 👤 Author
+##  Features
 
-- **Martins Fidel**  
-  [GitHub Profile](git@github.com:fidel-otieno2/PROJECT-1-PHASE-1-Simple-News-Website.git)
-
----
-
-## 📸 Screenshots
-
-### Home Page  
-![Home Page Screenshot](Home.png)
-
-### Sports Category  
-![Sports News Screenshot](Sports.png)
-
-### Search Results  
-![Search Results Screenshot](Technology.png)
+- **Live news** from GNews API
+- Search any topic
+- Quick category filters (Home, Sports, Weather, Technology)
+- Pagination (10 results per page, with next/previous)
+- Responsive, modern UI with cool styles
+- No backend required
 
 ---
 
-## 🌐 Live Demo
+##  Screenshots
 
-[View the Live Site on GitHub Pages]([text](https://github.com/fidel-otieno2/PROJECT-1-PHASE-1-Simple-News-Website.git))
+![screenshot](Home.png)
 
 ---
 
-## ⚖️ License
+##  Contributing
 
-This project is licensed under the [MIT License](LICENSE).
+Contributions are welcome!  
+To contribute:
+1. Fork this repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit and push (`git commit -m "Add feature"`).
+5. Open a Pull Request.
 
-&copy; 2025 Martins Fidel. All rights reserved.
+---
+
+##  Authors
+
+- **Martins Fidel** (Project Lead & Developer)
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+##  Credits
+
+- [GNews API](https://gnews.io/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- Unsplash (for background images)
