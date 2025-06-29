@@ -98,4 +98,4 @@ document.addEventListener('DOMContentLoaded', function() {
     currentPage = 1;
     fetchNews(currentPage, currentQuery);
   });
-})
+});
